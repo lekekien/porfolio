@@ -13,3 +13,21 @@ body{
 .bold{
     font-family: 'Raleway-bold';
 }
+.overflow-wrap{
+    overflow: hidden;
+}
+
+.canvas{
+    background: #252934;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+section.banner{
+    position: relative;
+    color: #fff;
+    height: calc(100vh + 53px);
+    padding: 0 10px;
+}

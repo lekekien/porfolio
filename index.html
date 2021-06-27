@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
     <script src="js/pts.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <title>My portfolio</title>
@@ -15,7 +16,48 @@
         <section class="banner">
             <div id="pt" class="canvas">
             </div>
+            <div class="flex">
+                <div class="text">
+                  Hello, I'm <span class="highlight">Le Ke Kien</span>.
+                  <br>
+                  I'm a full-stack web developer.
+                </div>
+                <div class="button page-link" dest="about">
+                  View my work <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
         </section>
+        <nav class="menu-nav flex">
+          <div class="wrap-link container">
+            <div class="link-item active">home</div>
+            <div class="link-item">about</div>
+            <div class="link-item">portfolio</div>
+            <div class="link-item">contact</div>
+          </div>
+        </nav>
+        <section class="container section-blog">
+          <div class="header">
+            <span class="text-header">About</span>
+          </div>
+          <div class="content flex">
+            <div class="flex-50">
+              <div class="img-wrap">
+                <img class="img-me" src="images/me.jpg" alt="">
+              </div>             
+            </div>
+            <div class="flex-50">
+              <div class="content-aboutme">
+                <p>
+                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                </p>
+                <p>
+                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+       
     </div>
 </body>
 <script src="js/canvas.js"></script>

@@ -33,6 +33,12 @@ body{
     top: 0;
     width: 100vw;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:99;
+}
 section.banner{
     position: relative;
     color: #fff;
@@ -100,6 +106,7 @@ section.banner{
     background: #1b242f;
     color:#fff;
     border-bottom: 2px solid #e31b6d ;
+    transition: .3s all ease-out
 }
 .menu-nav .wrap-link {
     text-align: left;

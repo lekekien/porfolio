@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/fav.jpg"/>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
@@ -14,7 +15,7 @@
 </head>
 <body>
     <div class="overflow-wrap">
-        <section class="banner">
+        <section class="banner" id="home" data-link="home">
             <div id="pt" class="canvas">
             </div>
             <div class="flex">
@@ -31,77 +32,85 @@
         <div id="menu-nav">
           <nav class="menu-nav flex">
             <div class="wrap-link container">
-              <div class="link-item active">home</div>
-              <div class="link-item">about</div>
-              <div class="link-item">project</div>
+              <div class="link-item" data-target="home">home</div>
+              <div class="link-item" data-target="about">about</div>
+              <div class="link-item" data-target="project">project</div>
               <div class="link-item">contact</div>
             </div>
           </nav>
         </div>
-        <section class="container section-blog">
-          <div class="header">
-            <span class="text-header">About</span>
-          </div>
-          <div class="content flex">
-            <div class="flex-50">
-              <div class="img-wrap">
-                <img class="img-me" src="images/me.jpg" alt="">
-              </div>             
+        <section class="section-blog" id="about" data-link="about">
+          <div class="container">
+            <div class="header">
+              <span class="text-header">About</span>
             </div>
-            <div class="flex-50">
-              <div class="content-aboutme">
-                <p class="note">
-                  Why did I become a developer?
-                </p>
-                <p>
-                  As a developer, I can freely create software, web sites from the knowledge I have learned. Being in Software Development isn’t quite the same as being a Graphic Designer or Fine Artist, but that doesn’t mean it’s not creative in its own way. I love solving problems, knowing that the software I make helps make someones life, job, or hobby easier/faster/better. I'm happy for that.
-                </p>
-                <p>
-                  Alongside learning about technology, developers will often have the opportunity to develop their knowledge about the business and sector they are working in, as these are also ever-changing.This constant change is an amazing learning opportunity, keeping my mind fresh and the job interesting.
-                </p>
-                <p class="note quotes">
-                    <i class="fas fa-quote-left"></i>
-                      Stay Hungry Stay Foolish.
-                    <i class="fas fa-quote-right"></i>
-                </p>
+            <div class="content flex">
+              <div class="flex-50">
+                <div class="img-wrap">
+                  <img class="img-me" src="images/me.jpg" alt="">
+                </div>             
+              </div>
+              <div class="flex-50">
+                <div class="content-aboutme">
+                  <p class="note">
+                    Why did I become a developer?
+                  </p>
+                  <p>
+                    As a developer, I can freely create software, web sites from the knowledge I have learned. Being in Software Development isn’t quite the same as being a Graphic Designer or Fine Artist, but that doesn’t mean it’s not creative in its own way. I love solving problems, knowing that the software I make helps make someones life, job, or hobby easier/faster/better. I'm happy for that.
+                  </p>
+                  <p>
+                    Alongside learning about technology, developers will often have the opportunity to develop their knowledge about the business and sector they are working in, as these are also ever-changing. This constant change is an amazing learning opportunity, keeping my mind fresh and the job interesting.
+                  </p>
+                  <p class="note quotes">
+                      <i class="fas fa-quote-left"></i>
+                        Stay Hungry Stay Foolish.
+                      <i class="fas fa-quote-right"></i>
+                  </p>
+                </div>
+                <div class="flex row button-bar">
+                  <a class="button" href="">Hire me</a>
+                  <a class="button" href="file/LeKeKien_CV.pdf">My CV</a>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="container section-blog">
-          <div class="header">
-            <span class="text-header">project</span>
-          </div>
-          <div class="content">
-            <div id="gallery" class="flex row">
-              <div class="mix react" data-my-order="1">
-                <div>
-                  <div class="card"></div>
-                  <div class="text">
-                    <div class="bold">ChowNow Ordering</div>
-                    <span class="highlight">React JS / Python</span>
+        <section class="section-blog gray" id="project" data-link="project">
+          <div class="container">
+            <div class="header">
+              <span class="text-header">project</span>
+            </div>
+            <div class="content">
+              <div id="gallery" class="flex row">
+                <div class="mix react" data-my-order="1">
+                  <div>
+                    <div class="card"></div>
+                    <div class="card-text">
+                      <div class="bold">ChowNow Ordering</div>
+                      <span class="highlight">React JS / Python</span>
+                    </div>
+                    <div class="button" id="ordering">LEARN MORE</div>
                   </div>
-                  <div class="button" id="ordering">LEARN MORE</div>
                 </div>
-              </div>
-              <div class="mix react" data-my-order="1">
-                <div>
-                  <div class="card"></div>
-                  <div class="text">
-                    <div class="bold">ChowNow Ordering</div>
-                    <span class="highlight">React JS / Python</span>
+                <div class="mix react" data-my-order="1">
+                  <div>
+                    <div class="card"></div>
+                    <div class="card-text">
+                      <div class="bold">ChowNow Ordering</div>
+                      <span class="highlight">React JS / Python</span>
+                    </div>
+                    <div class="button" id="ordering">LEARN MORE</div>
                   </div>
-                  <div class="button" id="ordering">LEARN MORE</div>
                 </div>
-              </div>
-              <div class="mix react" data-my-order="1">
-                <div>
-                  <div class="card"></div>
-                  <div class="text">
-                    <div class="bold">ChowNow Ordering</div>
-                    <span class="highlight">React JS / Python</span>
+                <div class="mix react" data-my-order="1">
+                  <div>
+                    <div class="card"></div>
+                    <div class="card-text">
+                      <div class="bold">ChowNow Ordering</div>
+                      <span class="highlight">React JS / Python</span>
+                    </div>
+                    <div class="button" id="ordering">LEARN MORE</div>
                   </div>
-                  <div class="button" id="ordering">LEARN MORE</div>
                 </div>
               </div>
             </div>

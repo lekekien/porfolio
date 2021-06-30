@@ -1,15 +1,16 @@
 $(document).ready(function(){
     $('#gallery').mixItUp({});
 
-    var header = $("#menu-nav");
+    var navPos = $("#menu-nav").position().top;
+    var lastPos = 0;
     window.onscroll = function(){
-        console.log("win :" + window.pageYOffset)
-        console.log($("#menu-nav").offset().top)
-        if(window.pageYOffset >= $("#menu-nav").offset().top){
-            header.addClass("sticky")
+        var pos = $(window).scrollTop();
+        if (pos >= navPos + $("#menu-nav").height() && lastPos < pos) {
+            $("#menu-nav").addClass('fixed');
         }
-        else{
-            header.removeClass("sticky")
+        if (pos < navPos && lastPos > pos) {
+            $("#menu-nav").removeClass('fixed');
         }
+        lastPos = pos;
     }
 })

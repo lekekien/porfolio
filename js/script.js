@@ -12,7 +12,6 @@ $(function(){
         cur.on("click", function(){
             var target = cur.data("target");
             posScroll = $("[data-link="+target+"]").offset().top - 50;
-            console.log(posScroll);
             $('html, body').animate({
                 scrollTop: posScroll
             }, 500);
@@ -50,4 +49,21 @@ $(function(){
         // }
     }   
 })
+
+var formData = {
+    name:"KienLK",
+    phone:"0373964438"
+}
+// $.ajax({
+//     url: 'https://formspree.io/f/xknkzvqb',
+//     method: 'POST',
+//     data: { 
+//         name:"KienLK",
+//         phone:"0373964438"
+//     },
+//     dataType: 'json'
+//   }).done(function(response) {
+//     console.log(response);
+//     console.log("success");
+//   });
 

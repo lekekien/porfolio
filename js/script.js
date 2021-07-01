@@ -11,8 +11,10 @@ $(function(){
         var cur = $(this);
         cur.on("click", function(){
             var target = cur.data("target");
+            posScroll = $("[data-link="+target+"]").offset().top - 50;
+            console.log(posScroll);
             $('html, body').animate({
-                scrollTop: $("[data-link="+target+"]").offset().top
+                scrollTop: posScroll
             }, 500);
             highlightLink(target);
         });
@@ -24,13 +26,12 @@ $(function(){
             .addClass('active');
     }
     function checkFixedWhenScroll(){
-       
         var pos = $(window).scrollTop();
         var pos2 = pos + 250;
         if (pos >= navPos  && lastPos < pos) {
             $("#menu-nav").addClass('sticky');
         }
-        if (pos < navPos && lastPos > pos) {
+        if (pos < navPos - 60 && lastPos > pos) {
             $("#menu-nav").removeClass('sticky');
         }  
         lastPos = pos;
@@ -44,7 +45,9 @@ $(function(){
         if (pos2 > $('#project').offset().top) {
             highlightLink('project');
         }
-    }
-    
+        // if (pos2 > $('#contact').offset().top) {
+        //     highlightLink('contact');
+        // }
+    }   
 })
 

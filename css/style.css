@@ -218,41 +218,6 @@ section.banner{
    bottom:0;
    right:75px; 
 }
-
-.flex.row{
-    flex-direction: row;
-}
-.flex.wrap{
-    flex-wrap: wrap;
-}
-
-#menu-nav.sticky{
-    animation: popDown 0.5s
-}
-#gallery .mix{
-    position: relative;
-}
-#gallery .mix .card {
-    width: 390px;
-    height: 300px;
-    background-position: center;
-    background-size: cover;
-}
-
-#gallery .mix:nth-child(1) .card{
-    background-image: url("../images/projects/naij1.png");
-}
-
-#gallery .mix .card-text{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-}
-
-.button-bar{
-
-}
 .button-bar .button{
     width: 100px;
     text-align: center;
@@ -280,4 +245,96 @@ section.banner{
 }
 .button-bar .button:nth-child(2){
     background:#6c757d;
+}
+
+
+.flex.row{
+    flex-direction: row;
+}
+.flex.wrap{
+    flex-wrap: wrap;
+}
+
+#menu-nav.sticky{
+    animation: popDown 0.5s
+}
+#gallery .mix{
+    position: relative;
+}
+#gallery .mix:not(:last-child){
+    margin-right: 50px;
+}
+#gallery .mix .card {
+    position: relative;
+    width: 340px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+}
+#gallery .mix:hover .card{
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#gallery .mix:nth-child(1) .card{
+    background-image: url("../images/projects/naij1.png");
+}
+#gallery .mix:nth-child(2) .card{
+    background-image: url("../images/projects/dvg.jpg");
+}
+#gallery .mix:nth-child(3) .card{
+    background-image: url("../images/projects/vcbs.jpg");
+}
+
+#gallery .mix .card-text{
+    position: absolute;
+    text-align: center;
+    top:0;
+    left:0;
+    opacity: 0;
+    width: 100%;
+    transition:all 0.5s ease;
+    z-index: 2;
+}
+#gallery .mix:hover .card-text{
+    cursor: poiter;
+    top:30%;
+    opacity: 1;
+}
+#gallery .mix .card-text .bold{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+#gallery .mix .card-text .highlight{
+    font-size: 20px;
+    color:#e31b6d
+}
+
+#gallery .mix .card-button{
+    position: absolute;
+    text-align: center;
+    bottom:0;
+    left:0;
+    opacity: 0;
+    width: 100%;
+    transition:all 0.5s ease;
+}
+
+#gallery .mix .card-button button{
+    background: #fff;
+    border: 2px solid #e31b6d;
+    padding: 10px 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+#gallery .mix:hover .card-button{
+    opacity: 1;
+    cursor: pointer;
+    bottom: 30%;
+}
+#gallery .mix .card-button button:hover{
+    color:#fff;
+    background: #e31b6d;
 }

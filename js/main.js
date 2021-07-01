@@ -1,5 +1,11 @@
 $(function(){
-    $('#gallery').mixItUp({});
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+      });
     var navPos = $("#menu-nav").position().top;
     var lastPos = 0;
     checkFixedWhenScroll();
@@ -49,6 +55,7 @@ $(function(){
         // }
     }   
 })
+
 
 var formData = {
     name:"KienLK",

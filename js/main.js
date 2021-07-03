@@ -30,6 +30,19 @@ $(function(){
             .find('[data-target="' + anchor + '"]')
             .addClass('active');
     }
+
+    $(".card-button button").on("click", function(){
+        console.log(1);
+        $(".modal").addClass("visible");
+        $(".overlay").addClass("visible");
+    })
+
+    $(".overlay, .close-modal").on("click", function(){
+        $(".modal").removeClass("visible");
+        $(".overlay").removeClass("visible");
+    })
+
+   
     function checkFixedWhenScroll(){
         var pos = $(window).scrollTop();
         var pos2 = pos + 250;

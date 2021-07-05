@@ -1,3 +1,32 @@
+var projects = [
+    {
+        slide : [
+            "images/projects/naij/naij1.png",
+            "images/projects/naij/naij2.png",
+            "images/projects/naij/naij3.png"
+        ],
+        title : "Naij Auto",
+        subtitle: "Auto Portal to Buy and Sell Cars Online in Nigeria",
+        detail: ""
+    },
+    {
+        slide : [
+            "images/projects/dvg.jpg",
+        ],
+        title : "DaiViet Group Internal Software",
+        subtitle: "Human Resource Management",
+        detail: ""
+    },
+    {
+        slide : [
+            "images/projects/vcbs/vcbs1.jpg",
+        ],
+        title : "Vietcombank Stock API",
+        subtitle: "API system for stock data",
+        detail: ""
+    }
+]
+
 $(function(){
     var swiper = new Swiper(".mySwiper", {
         navigation: {
@@ -32,7 +61,22 @@ $(function(){
     }
 
     $(".card-button button").on("click", function(){
-        console.log(1);
+        var projectId = parseInt($(this).data("project-id"));
+        var project = projects[projectId];
+        var htmlSlide = ""
+        project.slide.forEach(img => {
+            htmlSlide += `<div class="swiper-slide"><img src="${img}" alt=""></div>`
+        });
+        $(".swiper-slide").remove();
+        $(".mySwiper .swiper-wrapper").append(htmlSlide);
+        swiper.updateSlides();
+        swiper.slideTo(0);
+        console.log(project);
+        $(".modal .title").html(project.title);
+        $(".modal .sub-title").html(project.subtitle);
+        $(".modal .detail").html(project.detail);
+
+
         $(".modal").addClass("visible");
         $(".overlay").addClass("visible");
     })

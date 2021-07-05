@@ -11,6 +11,25 @@
         transform: translateY(-100px);
     }
 }
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e31b6d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#e31b6d;
+}
 body{
     font-family: 'Raleway';
 }
@@ -370,15 +389,17 @@ section.banner{
     position: fixed;
     top: -100%;
     left: 50%;
-    width: 800px;
+    width: 700px;
     height: auto;
     background-color: #fff;
+    visibility: hidden;
     transform: translate(-50%, 0);
     z-index:  101;
     transition: all 0.5s ease;
 }
 .modal.visible{
     top:8%;
+    visibility: visible;
 }
  .modal .description{
     padding: 40px 30px;
@@ -422,7 +443,7 @@ section.banner{
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #e31b6d;
+    background: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -443,7 +464,8 @@ section.banner{
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    /* object-fit: cover; */
     /* object-fit: fill; */
 }
 .mySwiper .swiper-button-next,.mySwiper .swiper-button-prev{

@@ -55,6 +55,7 @@ $(function(){
         });
     })
     function highlightLink(anchor) {
+        console.log(anchor);
         $('.link-item.active').removeClass('active');
         $('.menu-nav')
             .find('[data-target="' + anchor + '"]')
@@ -140,9 +141,12 @@ $(function(){
         if (pos2 > $('#project').offset().top) {
             highlightLink('project');
         }
-        // if (pos2 > $('#contact').offset().top) {
-        //     highlightLink('contact');
-        // }
+        if (pos2 > $('#resume').offset().top) {
+            highlightLink('resume');
+        }
+        if (pos2 > $('#contact').offset().top) {
+            highlightLink('contact');
+        }
     }   
 })
 

@@ -140,9 +140,9 @@ section.banner{
 }
 .menu-nav .wrap-link .link-item{
     display: inline-block;
-    padding: 20px 45px;
-    font-size: 21px;
-    text-transform: capitalize;
+    padding: 20px 30px;
+    font-size: 15px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.5s;
 }
@@ -688,7 +688,7 @@ footer .scroll-top{
     background-color: #4267b2;
 }
 .social .social-item.gh{
-    background-color: rgb(131, 58, 180)
+    background-color: #969393
 }
 .social .social-item.li{
     background-color: rgb(40, 103, 178);

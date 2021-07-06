@@ -44,13 +44,14 @@ $(function(){
 
     $(".link-item").each(function(){
         var cur = $(this);
-        cur.on("click", function(){
+        cur.on("click", function(e){
             var target = cur.data("target");
             posScroll = $("[data-link="+target+"]").offset().top - 50;
             $('html, body').animate({
                 scrollTop: posScroll
             }, 500);
             highlightLink(target);
+            e.preventDefault();
         });
     })
     function highlightLink(anchor) {
@@ -86,7 +87,39 @@ $(function(){
         $(".overlay").removeClass("visible");
     })
 
-   
+    var lastPostForm = "";
+    $("#form-info").on("submit", function(e){
+        var form = $(this).serialize();
+        if(lastPostForm != form){
+            $.ajax({
+                url: 'https://formspree.io/f/xknkzvqb',
+                method: 'POST',
+                data: form,
+                dataType: 'json'
+              }).done(function(response) {
+                lastPostForm = form;
+                if(response.ok){
+                    $(".wrap-form .noti").addClass("success");
+                    $(".noti .noti-content").html("Your message was sent successfully. Thanks!");
+                    $("#form-info").trigger("reset");
+                }else{
+                    $(".wrap-form .noti").addClass("error");
+                    $(".noti .noti-content").html("Something went wrong. Please try again!");
+                }
+                $("#wrap-noti").addClass("expand");
+              });
+        }
+        e.preventDefault();
+    });
+    $("#wrap-noti i").on("click", function(){
+        $("#wrap-noti").removeClass("expand");
+    })
+    $(".scroll-top").on("click", function(e){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+        e.preventDefault();
+    })
     function checkFixedWhenScroll(){
         var pos = $(window).scrollTop();
         var pos2 = pos + 250;
@@ -114,20 +147,4 @@ $(function(){
 })
 
 
-var formData = {
-    name:"KienLK",
-    phone:"0373964438"
-}
-// $.ajax({
-//     url: 'https://formspree.io/f/xknkzvqb',
-//     method: 'POST',
-//     data: { 
-//         name:"KienLK",
-//         phone:"0373964438"
-//     },
-//     dataType: 'json'
-//   }).done(function(response) {
-//     console.log(response);
-//     console.log("success");
-//   });
 

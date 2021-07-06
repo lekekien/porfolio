@@ -23,12 +23,12 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #e31b6d;
+    background: #ccc;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background:#e31b6d;
+    background:#ccc;
 }
 body{
     font-family: 'Raleway';
@@ -518,11 +518,16 @@ section.banner{
 .content-resume .resume-des{
     margin-bottom: 20px;
 }
-.content-resume .resume-des .resume-item{}
+.content-resume .resume-des .resume-item{
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 20px;
+}
 .content-resume .resume-des .resume-item .top{
     display: flex;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items:center;
+    margin-bottom: 20px;
 }
 .content-resume .resume-des .resume-item .top .position{
     font-size:20px
@@ -534,4 +539,169 @@ section.banner{
     color: #fff;
     border-radius: 20px;
 }
-.content-resume .resume-des .resume-item .bottom{}
+.content-resume .resume-des .resume-item .bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.resume-item .bottom .company{
+    display: flex;
+    font-size: 14px;
+    color:#887e7e
+}
+.resume-item .bottom .company .name{
+    margin-right:20px;
+    position: relative;
+}
+
+.resume-item .bottom .company .address{
+    position: relative;
+}
+.resume-item .bottom .company i{
+    color:#ccc
+}
+.resume-item .bottom .time-work {
+    color:#887e7e
+}
+.resume-item .bottom .time-work i {
+    color: #ccc
+}
+
+#contact{
+    background-color: #252934;
+    position: relative;
+    color: #fff;
+    padding-top:170px;
+}
+
+#contact svg{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+#contact .header .text-header:before{
+    background-color: #fff;
+}
+#contact .content{
+    text-align: center;
+}
+#contact .content .question{
+    color: #e31b6d;
+    margin-bottom: 30px;
+}
+
+.wrap-form input,
+.wrap-form textarea{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1e242c;
+    color:#fff;
+    border:none
+}
+
+.wrap-form button{
+    font-size:18px;
+    padding:10px 30px;
+    color:#fff;
+    background:none;
+    border:1px solid #fff;
+    border-radius: 7px;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+    font-size: 15px;
+}
+.wrap-form button:hover{
+    background:#e31b6d;
+    border:1px solid #e31b6d
+}
+#wrap-noti{
+    height:0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+#wrap-noti.expand{
+    height: auto;
+}
+.wrap-form .noti{
+    width: 500px;
+    padding: 8px 20px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap-form .noti.error{
+    background: #ffbde2;
+    border: 1px solid #b56584;
+    color: #752d2d;
+}
+.wrap-form .noti.success{
+    background: #04c986;
+    border: 1px solid #157c59;
+    color: #157051;
+}
+.wrap-form .noti i{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+footer{
+    padding: 30px 20px;
+    background: #1b242f;
+    position: relative;
+}
+footer .scroll-top{
+    font-size: 17px;
+    background: #e31b6d;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.social{
+    padding-top: 50px;
+    padding-bottom:50px ;
+}
+.social .social-item{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    color:#fff;
+}
+.social .social-item:not(:last-child){
+    margin-right: 20px;
+}
+.social .social-item.fb{
+    background-color: #4267b2;
+}
+.social .social-item.gh{
+    background-color: rgb(131, 58, 180)
+}
+.social .social-item.li{
+    background-color: rgb(40, 103, 178);
+}
+.social .social-item.ph{
+    background-color: #11b511;
+}
+.social .social-item.ma{
+    background-color: #911304;
+}
+.author{
+    color:#8f9aa7;
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+}

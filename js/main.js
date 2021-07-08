@@ -56,7 +56,7 @@ $(function(){
     })
     function highlightLink(anchor) {
         $('.link-item.active').removeClass('active');
-        $('.menu-nav')
+        $('.menu-link')
             .find('[data-target="' + anchor + '"]')
             .addClass('active');
     }
@@ -146,6 +146,10 @@ $(function(){
             highlightLink('contact');
         }
     }   
+
+    $("#button-menu").on("click", function(){
+        $("#list-menu-mobile").toggleClass("visible")
+    })
 })
 
 

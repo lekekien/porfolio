@@ -148,7 +148,12 @@ $(function(){
     }   
 
     $("#button-menu").on("click", function(){
-        $("#list-menu-mobile").toggleClass("visible")
+        $("#list-menu-mobile").toggleClass("visible");
+    })
+    $("#list-menu-mobile .link-item").on("click", function(){
+        if($("#list-menu-mobile").hasClass("visible")){
+            $("#list-menu-mobile").removeClass("visible");
+        }
     })
 })
 

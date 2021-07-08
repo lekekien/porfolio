@@ -55,7 +55,6 @@ $(function(){
         });
     })
     function highlightLink(anchor) {
-        console.log(anchor);
         $('.link-item.active').removeClass('active');
         $('.menu-nav')
             .find('[data-target="' + anchor + '"]')
@@ -73,7 +72,6 @@ $(function(){
         $(".mySwiper .swiper-wrapper").append(htmlSlide);
         swiper.updateSlides();
         swiper.slideTo(0);
-        console.log(project);
         $(".modal .title").html(project.title);
         $(".modal .sub-title").html(project.subtitle);
         $(".modal .detail").html(project.detail);

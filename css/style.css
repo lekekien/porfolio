@@ -705,3 +705,22 @@ footer .scroll-top{
     font-size: 17px;
     text-transform: uppercase;
 }
+
+
+
+
+
+
+/* RESPONSIVE */
+ @media screen and (max-width: 1024px) {
+    .container{
+        max-width: 1024px;
+    }
+    #gallery .mix:not(:last-child){
+        margin-right: 10px;
+    }
+    #gallery .mix .card{
+        width: 290px;
+        height: 250px;
+    }
+}

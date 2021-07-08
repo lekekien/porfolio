@@ -11,6 +11,9 @@
         transform: translateY(-100px);
     }
 }
+*{
+    box-sizing: border-box;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 7px;
@@ -226,32 +229,40 @@ section.banner{
 .note{
     text-align: center;
 }
-.note.quotes{
+.note.quotes {
     font-style: italic;
     text-align: center;
+    
+}
+.note.quotes  span{
     position: relative;
 }
-.note.quotes i {
+.note.quotes span:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10d";
     font-size: 15px;
+    font-weight: 800;
     position: absolute;
+    top: -10px;
+    left: -25px;
 }
-.note.quotes i:first-child{
-    top:0;
-    left:75px
+.note.quotes span::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10e";
+    font-size: 15px;
+    font-weight: 800;
+    position: absolute;
+    bottom: -10px;
+    right: -25px;
 }
-.note.quotes i:last-child{
-   bottom:0;
-   right:75px; 
-}
+
 .button-bar .button{
-    width: 100px;
+    width: 140px;
+    line-height: 50px;
+    height: 50px;
     text-align: center;
     display: inline-block;
     border-radius: 30px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
     font-size: 11px;
     letter-spacing: .05rem;
     text-decoration: none;
@@ -297,6 +308,7 @@ section.banner{
     background-size: cover;
 }
 #gallery .mix:hover .card{
+    background-size: cover;
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.5s;
@@ -309,7 +321,7 @@ section.banner{
     background-image: url("../images/projects/dvg.jpg");
 }
 #gallery .mix:nth-child(3) .card{
-    background-image: url("../images/projects/vcbs.jpg");
+    background-image: url("../images/projects/vcbs.png");
 }
 
 #gallery .mix .card-text{
@@ -709,18 +721,145 @@ footer .scroll-top{
 
 
 
-
-
 /* RESPONSIVE */
  @media screen and (max-width: 1024px) {
     .container{
         max-width: 1024px;
     }
+    #gallery{
+        padding:0px 20px
+    }
     #gallery .mix:not(:last-child){
+        margin-right: 0;
+    }
+    #gallery .mix:nth-child(odd){
         margin-right: 10px;
     }
     #gallery .mix .card{
         width: 290px;
         height: 250px;
+    }
+    .content-aboutme p.note{
+        font-size: 24px;
+        text-align: center;
+    }
+    .content-aboutme p{
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content.flex-md-col{
+        flex-direction:column
+    }
+    .content.flex-md-col .flex-md-100{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .img-wrap{
+        padding: 0 20px
+    }
+    .img-wrap:before{
+        display: none;
+    }
+    .content-aboutme{
+        padding: 0 20px
+    }
+    .note.quotes i:first-child{
+        left:190px
+    }
+    .note.quotes i:last-child{
+        right:190px
+    }
+    .img-wrap-2{
+        padding: 0 20px
+    }
+    .content-resume{
+        padding: 0 20px
+    }
+    .flex .wrap{
+        flex-wrap: wrap;
+    }
+    #gallery .mix {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    #gallery .mix .card{
+        width: calc(50vw - 30px);
+        background-size: cover;
+    }
+    #gallery .mix:hover .card-text{
+        top: 25%
+    }
+    #gallery .mix:hover .card-button{
+        bottom: 25%;
+    }
+    
+}
+
+@media screen and (max-width: 414px){
+    #menu-nav{
+        display: none;
+    }
+    .section-blog{
+        padding:40px 0px;
+    }
+    .header .text-header{
+        font-size:30px
+    }
+    #gallery{
+        padding:0px 20px;
+    }
+    #gallery .mix{
+        width:100%
+    }
+    #gallery .mix .card{
+        height: 240px;
+    }
+    #gallery .mix .card{
+        width: 100%;
+        background-size: cover;
+    }
+    #gallery .mix:nth-child(odd){
+        margin-right: 0;
+    }
+    #gallery .mix{
+        margin-bottom: 20px;
+    }
+
+    .resume-item .bottom .company{
+        display: block;
+    }
+    .resume-item .bottom .company span{
+        display: block;
+    }
+    .resume-item .bottom .company span.address{
+        display: none;
+    }
+    .resume-item .bottom .time-work{
+        font-size: 13px;
+    }
+    .content-resume .resume-des .resume-item .top .time{
+        padding:8px 20px;
+        font-size: 13px;
+    }
+    .content-resume .resume-des .resume-item .top .position{
+        font-size:17px
+    }
+    .content-resume .resume-des .resume-item .bottom.edu{
+        display: block;
+        font-size: 15px;
+    }
+    .content-resume .resume-des .resume-item .bottom.edu .company{
+        margin-bottom: 10px;
+    }
+    #contact .content{
+        padding:0 20px
+    }
+    #contact .content .wrap-form input, .wrap-form textarea{
+        width: 100%;
+    }
+    .wrap-form .noti{
+        width: 100%;
     }
 }

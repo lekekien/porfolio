@@ -844,7 +844,9 @@ footer .scroll-top{
     #gallery .mix:hover .card-button{
         bottom: 25%;
     }
-    
+    .modal{
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 414px){
@@ -911,6 +913,15 @@ footer .scroll-top{
     }
     .wrap-form .noti{
         width: 100%;
+    }
+    .modal .description {
+        padding: 20px 10px;
+    }
+    .modal .description .title {
+        font-size:23px
+    }
+    .modal .description .sub-title{
+        font-size: 17px;
     }
 }
 

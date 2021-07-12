@@ -825,7 +825,7 @@ footer .scroll-top{
         padding: 0 20px
     }
     .content-resume{
-        padding: 0 20px
+        padding: 0 20px;
     }
     .flex .wrap{
         flex-wrap: wrap;

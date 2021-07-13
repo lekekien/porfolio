@@ -7,7 +7,7 @@ var projects = [
         ],
         title : "Naij Auto",
         subtitle: "Auto Portal to Buy and Sell Cars Online in Nigeria",
-        detail: ""
+        detail: "<a href='https://naijauto.com'>NaijAuto</a> is a platform that lets user find, buy a used car faster,easier and more effective in Nigeria."
     },
     {
         slide : [
@@ -15,15 +15,16 @@ var projects = [
         ],
         title : "DaiViet Group Internal Software",
         subtitle: "Human Resource Management",
-        detail: ""
+        detail: "This is a information management system. Employees can access to this app for check their benefit, time work, etc."
     },
     {
         slide : [
             "images/projects/vcbs/vcbs1.jpg",
+            "images/projects/vcbs/vcbs3.png",
         ],
         title : "Vietcombank Stock API",
         subtitle: "API system for stock data",
-        detail: ""
+        detail: "This is a web application that provides API for Vietcombank Digital Mobile App about stock data"
     }
 ]
 
